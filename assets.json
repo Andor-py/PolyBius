@@ -1,0 +1,61 @@
+{
+    "hi": {
+           "large_image": "mp:attachments/1135264530188992562/1241885228839206952/KIq5Mph.png?ex=666a25bf&is=6668d43f&hm=0d13b122f8257ee86e71efc0deb2a12143f7944031b1e711bc021015c307ff26&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241885229296123904/NW6W99Z.png?ex=666a25bf&is=6668d43f&hm=6ffdd1e0dd8bf3dd90be5d6c83198873617a1e4fe46c0816cce2701753148952&=&format=webp&quality=lossless&width=885&height=498"
+          },
+
+    "omori": {
+           "large_image": "mp:attachments/1135264530188992562/1241884799543677078/mz6hUwZ.png?ex=666a2559&is=6668d3d9&hm=88deded5c66319199d62db178468c723e5356b4c371a5867c7ffcd7c088c05ba&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241884799065657464/aoeelX1.png?ex=666a2559&is=6668d3d9&hm=f04b882ad5f601e3022161cd5daa0074d7ce22f6cf1777b84042ed3d85ecabae&=&format=webp&quality=lossless"
+          },
+
+    "cod": {
+           "large_image": "mp:attachments/1135264530188992562/1241884801410142310/wjw9v2v.png?ex=666a2559&is=6668d3d9&hm=4164754d350d4bd8e75d54d3d50de20c521deb7fdfbe164db54ccfa4c54c142f&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241884798654349382/wHIf2MB.png?ex=666a2559&is=6668d3d9&hm=5aba6de784b4a0f4fea35c27a1e000f6c75c0c775ffba4f1aae78b0744ca109a&=&format=webp&quality=lossless"
+          },
+
+    "youtube": {
+           "large_image": "mp:attachments/1135264530188992562/1241885228646273094/zEuLNip.png?ex=666a25bf&is=6668d43f&hm=4fe111864696296d650f37deafaf64f84654021e9398ce1eb4d247862147055a&=&format=webp&quality=lossless&width=498&height=498",
+           "small_image": null
+          },
+
+    "car": {
+           "large_image": "mp:attachments/1135264530188992562/1241885228302073946/fGUtFxA.gif?ex=666a25bf&is=6668d43f&hm=3fbad008f4027c43edc956b10aa41b39cffc2fa2063253442d8ca29bc498355f&=",
+           "small_image": null
+          },
+
+    "js": {
+           "large_image": "mp:attachments/1135264530188992562/1241884801678708768/ezcgIck.png?ex=666a2559&is=6668d3d9&hm=33db14c089441a51bef8f2767ede24ce64514d78edad2581ee108c5e59383e7c&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241885227505418240/ORmWYeR.png?ex=666a25bf&is=6668d43f&hm=98b8d5cb018060e1bb9425b8e151bc96977a15720001c99006085d462b963d9e&=&format=webp&quality=lossless"
+          },
+
+    "python": {
+           "large_image": "mp:attachments/1135264530188992562/1241885227689705552/ao4EDtl.png?ex=666a25bf&is=6668d43f&hm=96e6a838d92a1dfe5918ee23b91b2a789902a2a8e25a2e082d905d31e7546a3e&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241885227505418240/ORmWYeR.png?ex=666a25bf&is=6668d43f&hm=98b8d5cb018060e1bb9425b8e151bc96977a15720001c99006085d462b963d9e&=&format=webp&quality=lossless"
+          },
+
+    "webdeck": {
+           "large_image": "mp:attachments/1135264530188992562/1241885228113592320/LuWmXgt.png?ex=666a25bf&is=6668d43f&hm=5c1d62f87d2876b7b2a197dab225d212ae7bdf6567d43debdb853c7ba68bccea&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1246825054667276388/ZeqLFdZ.png?ex=666a5211&is=66690091&hm=401503ce51a79e3596a1505879aa89cbe51ca4e6a5583e49e347558b00940ffd&=&format=webp&quality=lossless&width=350&height=350"
+          },
+
+    "nuclear": {
+           "large_image": "mp:attachments/1135264530188992562/1241885227891298455/HSMECPF.png?ex=666a25bf&is=6668d43f&hm=ba905e1489572a56ad0047a5209cfc8fa4fa24179641510461b2af401040181c&=&format=webp&quality=lossless",
+           "small_image": "mp:attachments/1135264530188992562/1241884800307171328/cMvMoUv.png?ex=666a2559&is=6668d3d9&hm=d07d441a205f9b1b622b24f4ff5a68c45f4ef2ab27a9c589a8c726ed887b3054&=&format=webp&quality=lossless&width=498&height=498"
+          },
+
+    "dark": {
+           "large_image": "mp:attachments/1135264530188992562/1241884800609030154/Z54YvlB.png?ex=666a2559&is=6668d3d9&hm=9e91b88d659c4ee0a70cbaddb000e0307ade5870f34c471708fc8c522c903a0a&=&format=webp&quality=lossless",
+           "small_image": null
+          },
+
+    "gta": {
+           "large_image": "mp:attachments/1135264530188992562/1241884801074729030/fR4p8I2.png?ex=666a2559&is=6668d3d9&hm=79ae6aada5b3eb38572be0d850926a4b697f64ea750cfd4fccee0c5bc47b9762&=&format=webp&quality=lossless",
+           "small_image": null
+          },
+
+    "tiktok": {
+           "large_image": "mp:ttachments/1135264530188992562/1241884798251831347/RUZMQZL.png?ex=666a2559&is=6668d3d9&hm=0d55484ce8e96e4749d6804c1791acd7027828738194ec369993096f03282fae&=&format=webp&quality=lossless&width=498&height=498",
+           "small_image": null
+          }
+}
