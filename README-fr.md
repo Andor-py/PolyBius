@@ -1,6 +1,3 @@
-Voici la traduction du fichier read.me en français :
-
-
 # Polybius
 ### Un Selfbot Discord puissant écrit en Python utilisant [discord.py-self](https://github.com/dolfies/discord.py-self) !
 
