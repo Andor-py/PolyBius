@@ -6,7 +6,7 @@
 ### A powerful Discord Selfbot written in Python using [discord.py-self](https://github.com/dolfies/discord.py-self)!
 
 <div align="center">
-  <img src="https://imgur.com/a/wXD9EFj.png" alt="icon" width="50%" height="50%">
+  <img src="https://i.imgur.com/EPJaixO.png" alt="icon" width="50%" height="50%">
 
  
 </div>
