@@ -2,7 +2,7 @@
 
 
 
-# Polybius
+# Polybius v1.9.11
 ### A powerful Discord Selfbot written in Python using [discord.py-self](https://github.com/dolfies/discord.py-self)!
 
 <div align="center">
