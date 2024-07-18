@@ -84,7 +84,7 @@ Now your token is in your clipboard. <br><br>
 
 ## 👀 Preview
 <div align="center">
-  <img src="hhttps://imgur.com/a/HysZTxt.png" alt="preview" width="" height="">
+  <img src="https://i.imgur.com/RVhkwXC.png" alt="preview" width="" height="">
 </div>
 
 
