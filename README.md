@@ -4,6 +4,7 @@
 
 # Polybius v1.9.11
 ### A powerful Discord Selfbot written in Python using [discord.py-self](https://github.com/dolfies/discord.py-self)!
+Powered By [Nuclear(https://github.com/Sitois/Nuclear-V2)
 
 <div align="center">
   <img src="https://i.imgur.com/EPJaixO.png" alt="icon" width="50%" height="50%">
