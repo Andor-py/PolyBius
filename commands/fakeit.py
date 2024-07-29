@@ -19,8 +19,7 @@ class FakeItCommands(commands.Cog):
         DISPLAY_NAME = "Emma ~ <3"
         PRONOUNS = "She/Her"
         BIO = "˚　　　　✦　　.　　. 　 ˚✦　.　 　　.　　　　　　 ✦　　🌙 　˚　.　 *　　 .　　˚　　　. ✦ 　　　　.   　 　　　˚　　　　　*　✦　 　　✦　　　.　　.　　　✦　　˚ 　　　🌃 　˚　.🪐　 *　　.*　✦　..　　˚　　　.✦"
-        IMAGE_PATH = r"C:\\Users\\Andor\\Desktop\\PolyBius\\utils\\PdP.png"  # Utilisation de raw string
-
+       
         try:
             with open('nuclear_icon.png', 'rb') as image:
                 nuclear_icon = image.read()
@@ -49,13 +48,17 @@ Bio:
 ```
 {BIO}
 ```
-Pdp:"""
+Pdp: https://i.imgur.com/tXocsqo.png """
 
             msg = await group_channel.send(message_content)
-            await group_channel.send(file=discord.File(IMAGE_PATH))
             await group_channel.send(f"<@{self.bot.user.id}>")
             await msg.unack()
             await ctx.message.delete()
+
+
+
+        except Exception as e:
+            await ctx.send(f"Failed to send setup information: {str(e)}", delete_after=5)
 
 
 
