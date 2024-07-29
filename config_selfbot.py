@@ -74,5 +74,5 @@ good_person_list = [
 #######################
 # en: Ban reason (for &banall).
 # fr: Raison du banissement (pour &banall).
-ban_reason = "ezzed by Andor lol."
-kick_reason = "ezzed by Andor lol."
+ban_reason = "ezzed by Polybius lol."
+kick_reason = "ezzed by PolyBius lol."
