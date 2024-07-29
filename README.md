@@ -53,7 +53,7 @@ Open `config_selfbot.py` with any text editor  and enter ur [user token](https:/
 * Alt Account Setup,
 * And others!
 
-## 📜 How to get a user token
+## 📜 How to get ur user token
 1. Go to [Discord Web](https://discord.com/app)
 2. Do ``CTRL + MAJ + I`` and go to `Console`
 3. Paste this code:
