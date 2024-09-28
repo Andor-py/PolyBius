@@ -147,6 +147,21 @@ async def on_ready():
     log.separate_yellow()
 
     # Load commands from cogs
+
+    try:
+        await bot.add_cog(HelpCommands(bot))
+        log.success(f"Help Commands: {langs.cog_success[config_selfbot.lang]}")
+    except Exception as e:
+        log.fail(f"Help Commands: {langs.cog_fail[config_selfbot.lang]} {e}")
+
+
+    try:
+        await bot.add_cog(FunCommands(bot))
+        log.success(f"Fun Commands: {langs.cog_success[config_selfbot.lang]}")
+    except Exception as e:
+        log.fail(f"Fun Commands: {langs.cog_fail[config_selfbot.lang]} {e}")
+
+
     try:
         await bot.add_cog(UtilsCommands(bot))
         log.success(f"Utils Commands: {langs.cog_success[config_selfbot.lang]}")

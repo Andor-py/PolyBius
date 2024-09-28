@@ -1,8 +1,11 @@
+Voici la traduction du fichier read.me en français :
+
+
 # Polybius
 ### Un Selfbot Discord puissant écrit en Python utilisant [discord.py-self](https://github.com/dolfies/discord.py-self) !
 
 <div align="center">
-  <img src="https://i.imgur.com/EPJaixO.png" alt="icon" width="50%" height="50%">
+  <img src="https://imgur.com/a/wXD9EFj.png" alt="icon" width="50%" height="50%">
 </div>
 
 <div align="center">

@@ -2,9 +2,8 @@
 
 
 
-# Polybius v1.9.11
+# Polybius
 ### A powerful Discord Selfbot written in Python using [discord.py-self](https://github.com/dolfies/discord.py-self)!
-Powered By [Nuclear](https://github.com/Sitois/Nuclear-V2)
 
 <div align="center">
   <img src="https://i.imgur.com/EPJaixO.png" alt="icon" width="50%" height="50%">
@@ -22,13 +21,13 @@ Powered By [Nuclear](https://github.com/Sitois/Nuclear-V2)
 1. [💾 Installation](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-installation)
 2. [🔧 Config](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-config)
 3. [🌟 Features](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-features)
-4. [📜 How to get ur user token](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-how-to-get-a-user-token)
-6. [👀 Preview](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-preview)
-7. [☣️ Issues](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#%EF%B8%8F-issues)
-8. [🛠️ Developement version](https://github.com/Andor-py/PolyBius#%EF%B8%8F-developement-version)
-9. [❓ How to contribute](https://github.com/Andor-py/PolyBius#-how-to-contribute)
-10. [⭐ Contributors](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-contributors)
-11. [🫂 Support](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#support)
+4. [📜 How to get a user token](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-how-to-get-a-user-token)
+5. [👀 Preview](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-preview)
+6. [☣️ Issues](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#%EF%B8%8F-issues)
+7. [🛠️ Developement version](https://github.com/Andor-py/PolyBius#%EF%B8%8F-developement-version)
+8. [❓ How to contribute](https://github.com/Andor-py/PolyBius#-how-to-contribute)
+9. [⭐ Contributors](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-contributors)
+10. [🫂 Support](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#support)
 
 ## 💾 Installation
 1. Download the latest version from the [Releases](https://github.com/Andor-py/PolyBius/releases) section on GitHub.
@@ -39,7 +38,7 @@ Powered By [Nuclear](https://github.com/Sitois/Nuclear-V2)
 6. Get started !
 
 ## 🔧 Config
-Open `config_selfbot.py` with any text editor  and enter ur [user token](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-how-to-get-a-user-token).
+Open `config_selfbot.py` with any text editor  and enter a [user token](https://github.com/Andor-py/PolyBius?tab=readme-ov-file#-how-to-get-a-user-token).
 
 ## 🌟 Features
 * Voice commands,
@@ -53,7 +52,7 @@ Open `config_selfbot.py` with any text editor  and enter ur [user token](https:/
 * Alt Account Setup,
 * And others!
 
-## 📜 How to get ur user token
+## 📜 How to get a user token
 1. Go to [Discord Web](https://discord.com/app)
 2. Do ``CTRL + MAJ + I`` and go to `Console`
 3. Paste this code:
@@ -139,7 +138,7 @@ A big thank to [Sitois](https://github.com/Sitois) for the code of Nuclear and f
 
 ---
 
-[![](https://visitcount.itsvg.in/api?id=ANDOR&label=Repos%20Views&color=12&icon=5&pretty=true)](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=Nuclear&label=Repo%20Views&color=2&icon=5&pretty=false)](https://visitcount.itsvg.in)
 
 ---
 Nuclear-V1 By sitois: [![wakatime](https://wakatime.com/badge/user/018af69f-9d50-4699-932d-026a9efb0401/project/018d13ec-4c15-459c-b9a8-e02089e7681b.svg)](https://wakatime.com/badge/user/018af69f-9d50-4699-932d-026a9efb0401/project/018d13ec-4c15-459c-b9a8-e02089e7681b)
