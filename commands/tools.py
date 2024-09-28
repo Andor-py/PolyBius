@@ -2,10 +2,13 @@ import discord
 from discord.ext import commands, tasks
 import asyncio
 from colorama import Fore, Style, Back
-
+import yt_dlp  # Assurez-vous que cette ligne est présente
+import os  # Pour la gestion des fichiers
+import re  # Importer la bibliothèque pour nettoyer le nom du fichier
 from utils import log, random_cooldown
 import config_selfbot
 import langs
+from datetime import datetime
 
 
 class ToolsCommands(commands.Cog):
@@ -84,27 +87,6 @@ Still need to bump {count - i - 1} time in {ctx.channel.name}({ctx.channel.id}).
 
 
 
-    @commands.command()
-    async def autoxp(self, ctx: commands.Context):
-        message_split = ctx.message.content.split()
-        try:
-            count = int(message_split[1])  # Tenter de convertir la deuxième partie en entier
-        except Exception:
-            await ctx.message.edit(content="envoi impossible!", delete_after=config_selfbot.deltime)
-            return
-
-        if count >= 1000:
-            await ctx.message.edit(content="nombre trop grand", delete_after=config_selfbot.deltime)
-            return
-
-        await ctx.message.edit(content="_ _", delete_after=3)
-
-        for i in range(count):
-            # Attendre un intervalle aléatoire entre 60 et 70 secondes
-            cooldown_time = 35
-            sent_message = await ctx.send("_ _", delete_after=0.7)
-            log.success(f"Message envoyé {i + 1} fois sur {ctx.guild.name} dans {ctx.channel.name}.")
-            await asyncio.sleep(cooldown_time)
 
     @commands.command()
     async def dmall(self, ctx: commands.Context):
@@ -165,3 +147,90 @@ Still need to bump {count - i - 1} time in {ctx.channel.name}({ctx.channel.id}).
                 await asyncio.sleep(random_cooldown(0.5, 2))
 
         await ctx.message.edit(langs.tool_close_dms_bots_success[config_selfbot.lang], delete_after=config_selfbot.deltime)
+
+
+
+    @commands.command()
+    async def mp3(self, ctx, url: str):
+        status_message = await ctx.send("Conversion en cours...")  # Message de statut
+
+        # Récupérer l'heure actuelle et la formater pour le nom du fichier
+        current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        # Nouveau nom de fichier
+        new_file_name = f"Votre_fichier_{current_time}.mp3"
+
+        # Dossier de téléchargement
+        download_dir = 'downloads'
+
+        # Définir les options pour yt-dlp
+        options = {
+            'format': 'bestaudio/best',
+            'outtmpl': f'{download_dir}/%(title)s.%(ext)s',  # Télécharge avec le nom original dans le dossier downloads
+            'postprocessors': [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'mp3',
+                'preferredquality': '192',
+            }],
+        }
+
+        try:
+            with yt_dlp.YoutubeDL(options) as ydl:
+                info = ydl.extract_info(url, download=True)  # Télécharger et extraire l'audio
+                original_file_name = ydl.prepare_filename(info).replace('.webm', '.mp3')
+
+            # Chemin complet vers le fichier téléchargé
+            original_file_path = os.path.join(download_dir, os.path.basename(original_file_name))
+
+            # Nouveau chemin avec le nouveau nom
+            new_file_path = os.path.join(download_dir, new_file_name)
+
+            # Renommer le fichier téléchargé
+            os.rename(original_file_path, new_file_path)
+
+            # Envoyer le fichier MP3 à l'utilisateur
+            await ctx.send("Voici votre fichier:", file=discord.File(new_file_path))
+
+        except Exception as e:
+            await ctx.send(f"Erreur lors du téléchargement ou du renommage : {str(e)}")
+
+        finally:
+            # Supprimer le message de statut
+            await status_message.delete()
+
+
+
+    @commands.command()
+    async def opus(self, ctx, url: str = None):
+        if ctx.message.attachments:
+            attachment = ctx.message.attachments[0]
+            status_message = await ctx.send("Conversion en cours...")  # Message de statut
+            
+            opus_file = f'downloads/{attachment.filename.rsplit(".", 1)[0]}.opus'
+
+            # Téléchargez le fichier et convertissez-le
+            await attachment.save(f'downloads/{attachment.filename}')
+            os.system(f"ffmpeg -y -i downloads/{attachment.filename} -c:a libopus -b:a 192k -strict -2 {opus_file}")
+            
+            # Envoyez le fichier en tant que note vocale
+            await ctx.send(file=discord.File(opus_file))
+
+            # Supprimez le message de commande et le message de statut
+            await ctx.message.delete()
+            await status_message.delete()  # Supprimer le message "Conversion en cours..."
+
+        elif url:
+            status_message = await ctx.send("Conversion en cours...")  # Message de statut
+            
+            # Ajoutez ici votre logique de téléchargement depuis l'URL et de conversion
+            # Par exemple :
+            # os.system(f"ffmpeg -y -i '{url}' -c:a libopus -b:a 192k -strict -2 {opus_file}")
+            
+            # Envoyer le fichier après conversion
+            await ctx.send(file=discord.File(opus_file))
+
+            # Supprimez le message de commande et le message de statut
+            await ctx.message.delete()
+            await status_message.delete()  # Supprimer le message "Conversion en cours..."
+
+
+

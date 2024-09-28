@@ -37,7 +37,7 @@ class UtilsCommands(commands.Cog):
 <@{sniped_message['author_id']}> as envoyé : ''** {images_text}{sniped_message['content']} **''
 Malheureusement, cela a été supprimé <t:{sniped_message['time']}:R>...""")
         else:
-            await ctx.message.edit(langs.error_no_message_snipe[config_selfbot.lang], delete_after=config_selfbot.deltime)
+            await ctx.message.edit(langs.error_no_message_snipe[config_selfbot.lang], delete_after=0.2)
 
     @commands.command()
     async def snipepic(self, ctx: commands.Context):

